@@ -1,4 +1,4 @@
-
+//Luis Escamilla
 // Initialize game state
 const gameState = {
     currentPlayer: 'red',  // Player colors
@@ -38,7 +38,7 @@ function initGame() {
     gameState.board = Array(6).fill().map(() => Array(7).fill(null)); // 6x7 grid
     gameState.gameOver = false;
     gameState.result = null;
-
+    //creates board
     createBoard();
     updateStatus();
     document.querySelectorAll('.column').forEach(column => {
@@ -85,6 +85,7 @@ function handleColumnClick(event) {
             gameState.gameOver = true;
             gameState.result = 'win';
         }
+        //checks for a draw
         else if(checkDraw()) {
             gameState.gameOver = true;
             gameState.result = 'draw';
@@ -160,17 +161,18 @@ function checkWin(row, col){
            checkDirection(row, col, 1, 0) || // Vertical
            checkDirection(row, col, 1, 1) || // Diagonal \
            checkDirection(row, col, 1, -1);  // Diagonal /
-    
+    //checks for a 4 in a row in all directions
     function checkDirection(r, c, dr, dc) {
         return 1 + countConsecutive(r, c, dr, dc, player) 
                  + countConsecutive(r, c, -dr, -dc, player) >= 4;
     }
 }
+//counts the consecutive colors in a ANY row
 function countConsecutive(row, col, deltaRow, deltaCol, player) {
     let count = 0;
     let currentRow = row + deltaRow;
     let currentCol = col + deltaCol;
-    
+    //keeps going until out of bounds or not the same color
     while (currentRow >= 0 && currentRow < 6 && 
            currentCol >= 0 && currentCol < 7 &&
            gameState.board[currentRow][currentCol] === player) {
