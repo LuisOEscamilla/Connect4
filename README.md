@@ -29,5 +29,5 @@ cd connect4
 ```
 
 ## Live Demo
-[Play Online](https://LuisOEscamilla.github.io/connect4)
+[Play Online](https://LuisOEscamilla.github.io/Connect4)
 
