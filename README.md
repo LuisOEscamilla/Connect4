@@ -7,7 +7,6 @@
 - 🔴🟡 Two-player turn-based gameplay
 - � Win detection in all directions (horizontal, vertical, diagonal)
 - ♻️ Reset game functionality
-- 🎯 Column hover preview (if implemented)
 - 📊 Real-time game status display
 - 🎨 Responsive design
 
